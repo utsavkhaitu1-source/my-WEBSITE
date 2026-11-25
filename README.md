@@ -3,7 +3,7 @@ Utsav Forecasts
 
 Development and Deployment of a Web Application — Final Project Report
 
-Live application: https://[utsavkhaitu-username].github.io/[my-WEBSITE]/
+Live application: https://utsavkhaitu1-source.github.io/my-WEBSITE/
 
 1. Introduction
 
