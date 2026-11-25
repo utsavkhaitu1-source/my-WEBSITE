@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us — Utsav Forecasts</title>
+  <meta name="description" content="About Utsav Forecasts, a calendar with built-in weather reports.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Utsav Forecasts home">
+        <span class="logo" aria-hidden="true">🌤️</span><strong>Utsav Forecasts</strong>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" id="theme-btn" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" id="nav-toggle" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="eyebrow">About Us</span>
+      <h1>Weather you can plan your life around.</h1>
+      <p class="justify">
+        Utsav Forecasts began with a simple idea: a calendar is where we plan our days, so the weather should
+        live there too. The word <em>utsav</em> means &ldquo;festival&rdquo; or &ldquo;celebration&rdquo; in
+        Nepali and Hindi, and that is the spirit of the project. Whether you are arranging a family gathering,
+        a trek, a market day or a simple walk, knowing what the sky will do makes every occasion easier to enjoy.
+        We bring together a clean monthly calendar and reliable forecast data so you can see both at a glance
+        instead of switching between apps.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>What you can do</h2>
+        <div class="grid-3">
+          <article class="card feature">
+            <div class="ico"><i class="fa-solid fa-calendar-days"></i></div>
+            <h3>Weather on every date</h3>
+            <p class="justify">Each calendar day shows an icon with the expected high and low, covering the past week and the next fifteen days.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><i class="fa-solid fa-clock"></i></div>
+            <h3>Hourly detail</h3>
+            <p class="justify">Select a date to see hour-by-hour temperature and rain chances, plus wind, UV index, sunrise and sunset.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>Any city, worldwide</h3>
+            <p class="justify">Search for a city or use your current location. Your last location and preferences are remembered on your device.</p>
+          </article>
+          <article class="card feature">
+            <div class="ico"><i class="fa-solid fa-note-sticky"></i></div>
+            <h3>Personal notes</h3>
+            <p class="justify">Attach short notes or events to any day. They are stored privately in your browser and never leave your device.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="card">
+          <h2>How it works</h2>
+          <ol class="steps justify">
+            <li>Your browser requests a forecast for the chosen location from the free Open-Meteo service.</li>
+            <li>The data is arranged by date and drawn onto the monthly calendar grid.</li>
+            <li>Clicking a date opens its full report, with an hourly strip and a place for your notes.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h2>Built with</h2>
+          <p class="justify">
+            The site is written in plain HTML, CSS and JavaScript with no frameworks. Layout uses CSS Grid for the
+            calendar and card sections and Flexbox for the navigation bar and page structure. Styles and scripts
+            are kept in separate, reusable external files shared by every page.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML5</span><span class="tag">CSS Grid</span><span class="tag">Flexbox</span>
+            <span class="tag">JavaScript</span><span class="tag">Open-Meteo API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card cta">
+          <h2>Have a question or an idea?</h2>
+          <p class="muted">We would love to hear how Utsav Forecasts can be more useful for you.</p>
+          <a class="btn" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span id="year">2026</span> Utsav Forecasts · Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+</body>
+</html>

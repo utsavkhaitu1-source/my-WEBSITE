@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Utsav Forecasts</title>
+  <meta name="description" content="Contact Utsav Forecasts.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Utsav Forecasts home">
+        <span class="logo" aria-hidden="true">🌤️</span><strong>Utsav Forecasts</strong>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" id="theme-btn" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" id="nav-toggle" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="eyebrow">Contact</span>
+      <h1>Get in touch</h1>
+      <p class="justify">
+        Found a bug, want a new feature, or just want to say hello? Fill in the form and we will reply as soon as
+        we can. You can also reach us using the details beside the form.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <form id="contact-form" class="card" novalidate>
+          <h2>Send a message</h2>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" maxlength="500" required></textarea>
+            <span class="error" aria-live="polite"></span>
+            <small class="muted" id="msg-count">0 / 500</small>
+          </div>
+          <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Send message</button>
+          <p id="form-status" class="form-status" role="status" hidden></p>
+        </form>
+
+        <aside class="card">
+          <h2>Contact details</h2>
+          <ul class="info-list">
+            <li><span class="ico"><i class="fa-solid fa-location-dot"></i></span><div><strong>Location</strong><small>Kathmandu, Nepal</small></div></li>
+            <li><span class="ico"><i class="fa-solid fa-envelope"></i></span><div><strong>Email</strong><small>hello@utsavforecasts.example</small></div></li>
+            <li><span class="ico"><i class="fa-solid fa-phone"></i></span><div><strong>Phone</strong><small>+977 1 000 0000</small></div></li>
+            <li><span class="ico"><i class="fa-solid fa-clock"></i></span><div><strong>Hours</strong><small>Sun – Fri, 10:00 – 17:00 (NPT)</small></div></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span id="year">2026</span> Utsav Forecasts · Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

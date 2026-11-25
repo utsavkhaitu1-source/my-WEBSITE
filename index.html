@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Utsav Forecasts — Calendar with Weather</title>
+  <meta name="description" content="A monthly calendar with daily weather forecasts, hourly details and notes.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html" aria-label="Utsav Forecasts home">
+        <span class="logo" aria-hidden="true">🌤️</span><strong>Utsav Forecasts</strong>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" id="theme-btn" class="icon-btn" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <button type="button" id="nav-toggle" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <span class="eyebrow">Calendar + Weather</span>
+      <h1>Plan every day with the forecast in view.</h1>
+      <p class="justify">
+        Utsav Forecasts combines a familiar monthly calendar with a live weather report. Each date shows the
+        expected conditions and temperatures, and a single click opens the full detail for that day: rain chance,
+        wind, UV index, sunrise and sunset, an hourly breakdown, and your own notes. Search any city in the
+        world, switch between Celsius and Fahrenheit, and pick a light or dark theme that suits you.
+      </p>
+    </section>
+
+    <div class="container">
+      <form id="search-form" class="toolbar card" autocomplete="off">
+        <div class="search">
+          <input id="search-input" type="search" placeholder="Search a city…" aria-label="Search for a city">
+          <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+          <button type="button" id="locate-btn" class="btn ghost" title="Use my location" aria-label="Use my location"><i class="fa-solid fa-location-crosshairs"></i></button>
+          <ul id="results" class="results" hidden></ul>
+        </div>
+        <div class="seg" role="group" aria-label="Temperature units">
+          <button type="button" data-unit="c" class="active">°C</button>
+          <button type="button" data-unit="f">°F</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="layout">
+      <section class="now card" id="now" aria-live="polite">
+        <div class="skeleton">Loading weather…</div>
+      </section>
+
+      <section class="calendar card" aria-label="Calendar">
+        <div class="cal-head">
+          <button type="button" id="prev" class="btn ghost" aria-label="Previous month"><i class="fa-solid fa-chevron-left"></i></button>
+          <h2 id="month-title">Month</h2>
+          <button type="button" id="next" class="btn ghost" aria-label="Next month"><i class="fa-solid fa-chevron-right"></i></button>
+          <button type="button" id="today-btn" class="btn">Today</button>
+        </div>
+        <div class="weekdays" aria-hidden="true">
+          <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span class="sat">Sat</span>
+        </div>
+        <div id="grid" class="grid"></div>
+        <p class="legend">Forecast covers the past 7 days and the next 15 days. A <span class="dot"></span> marks a day with notes.</p>
+      </section>
+
+      <aside class="detail card" aria-label="Selected day details">
+        <h2 id="d-date">Select a day</h2>
+        <p id="d-sub" class="muted"></p>
+        <div id="d-weather"></div>
+        <h3>Hourly</h3>
+        <div id="d-hourly" class="hourly"></div>
+        <h3>Notes</h3>
+        <form id="note-form" class="note-form">
+          <input id="note-input" type="text" maxlength="120" placeholder="Add a note or event…" aria-label="New note">
+          <button type="submit" class="btn">Add</button>
+        </form>
+        <ul id="notes" class="notes"></ul>
+      </aside>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span id="year">2026</span> Utsav Forecasts · Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></span>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
